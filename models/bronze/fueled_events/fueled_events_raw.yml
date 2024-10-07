@@ -1,0 +1,4546 @@
+sources:
+  - name: fueled_events
+    tables:
+      - name: cart_viewed
+        columns:
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: products
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: currency
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_library_name
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_page_search
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_request_ip
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_page_title
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: total
+            data_type: int64
+          - name: context_app
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_lifetime_value
+            data_type: int64
+
+      - name: cart_viewed_view
+        columns:
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: products
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: currency
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_library_name
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_page_search
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_request_ip
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_page_title
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: total
+            data_type: int64
+          - name: context_app
+            data_type: string
+          - name: context_page_url
+            data_type: string
+
+      - name: checkout_created
+        columns:
+          - name: id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: coupon
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_passed_ip
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: context_source_type
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: products
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: affiliation
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_library_name
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: context_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: context_rudderstack_source
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+          - name: context_client_id
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+
+      - name: checkout_created_view
+        columns:
+          - name: id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: coupon
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_passed_ip
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: context_source_type
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: products
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: affiliation
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_library_name
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: context_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: context_rudderstack_source
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+
+      - name: checkout_started
+        columns:
+          - name: context_destination_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_debug
+            data_type: boolean
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: shipping
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: context_page_referrer
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: event_text
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_app
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_fb_event_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: currency
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_title
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: checkout_id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: products
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_campaign_source
+            data_type: boolean
+          - name: context_campaign_name
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_phone
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+
+      - name: checkout_started_view
+        columns:
+          - name: context_destination_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_debug
+            data_type: boolean
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: shipping
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: context_page_referrer
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: event_text
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_app
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_fb_event_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: currency
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_title
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: checkout_id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: products
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_page_url
+            data_type: string
+
+      - name: identifies
+        columns:
+          - name: context_destination_type
+            data_type: string
+          - name: context_traits_context_page_path
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_traits_context_app
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_traits_context_initialized
+            data_type: boolean
+          - name: context_traits_context_traits_address_state_code
+            data_type: string
+          - name: context_traits_context_ga_4_session_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: email
+            data_type: string
+          - name: context_traits_context_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_traits_context_page_url
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_traits_context_fb_fbp
+            data_type: string
+          - name: context_traits_context_fb_event_id
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_context_fb_external_id
+            data_type: string
+          - name: first_name
+            data_type: string
+          - name: external_customer_id
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_traits_context_fb_fbc
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_offline
+            data_type: boolean
+          - name: context_url
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_traits_context_page_height
+            data_type: int64
+          - name: context_source_type
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: timestamp
+            data_type: timestamp
+          - name: order_count
+            data_type: int64
+          - name: context_traits_context_timezone
+            data_type: string
+          - name: address_state_code
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_ip
+            data_type: string
+          - name: context_traits_context_session_id
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_context_fueled_external_id
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_traits_context_locale
+            data_type: string
+          - name: context_traits_context_library_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_context_ga_4_user_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_traits_context_anonymous_id
+            data_type: string
+          - name: context_traits_context_library_name
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_context_traits_address_country_code
+            data_type: string
+          - name: phone
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_traits_context_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_context_traits_email
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_traits_context_offline
+            data_type: boolean
+          - name: context_traits_context_debug
+            data_type: boolean
+          - name: context_traits_context_user_agent
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_campaign_source
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_traits_created_at
+            data_type: timestamp
+          - name: address_country_code
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_context_page_title
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: last_name
+            data_type: string
+          - name: lifetime_value
+            data_type: int64
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_context_page_referrer
+            data_type: string
+          - name: context_traits_context_os_name
+            data_type: string
+          - name: context_traits_context_referrer
+            data_type: string
+          - name: context_traits_context_page_width
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: created_at
+            data_type: timestamp
+          - name: context_traits_context_ga_4_client_id
+            data_type: string
+          - name: context_traits_context_traits_shopify_customer_id
+            data_type: string
+          - name: address_street
+            data_type: string
+          - name: address_country
+            data_type: string
+          - name: context_traits_context_campaign_gclid
+            data_type: string
+          - name: context_traits_context_traits_external_customer_id
+            data_type: string
+          - name: name
+            data_type: string
+          - name: address_postal_code
+            data_type: string
+          - name: context_traits_context_traits_address_state
+            data_type: string
+          - name: context_client_id
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_context_campaign_term
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_traits_context_campaign_name
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_context_campaign_source
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_context_traits_first_name
+            data_type: string
+          - name: context_traits_context_traits_name
+            data_type: string
+          - name: address_city
+            data_type: string
+          - name: context_traits_context_traits_address_street
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: address_state
+            data_type: string
+          - name: context_traits_context_campaign_medium
+            data_type: string
+          - name: context_traits_context_page_search
+            data_type: string
+          - name: context_traits_context_traits_last_name
+            data_type: string
+          - name: context_traits_context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_context_campaign_content
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_context_traits_address_country
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_context_campaign_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_context_traits_address_city
+            data_type: string
+          - name: context_campaign_te
+            data_type: boolean
+          - name: context_traits_context_traits_phone
+            data_type: string
+          - name: context_traits_context_page_hash
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_traits_context_campaign_klaviyo_id
+            data_type: string
+          - name: context_campaign_email
+            data_type: string
+          - name: context_traits_context_traits_visitor_type
+            data_type: string
+          - name: context_traits_context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_context_traits_order_count
+            data_type: int64
+          - name: visitor_type
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_context_campaign_email
+            data_type: string
+          - name: context_campaign_sou
+            data_type: boolean
+          - name: context_campaign_ad_group
+            data_type: string
+          - name: context_campaign_var
+            data_type: string
+          - name: context_campaign_referrer
+            data_type: boolean
+          - name: context_campaign_expid
+            data_type: string
+          - name: context_campaign_campgaign
+            data_type: string
+          - name: context_campaign_page
+            data_type: string
+          - name: context_traits_context_campaign_page
+            data_type: string
+
+      - name: identifies_view
+        columns:
+          - name: context_destination_type
+            data_type: string
+          - name: context_traits_context_page_path
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_traits_context_app
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_traits_context_initialized
+            data_type: boolean
+          - name: context_traits_context_traits_address_state_code
+            data_type: string
+          - name: context_traits_context_ga_4_session_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: email
+            data_type: string
+          - name: context_traits_context_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_traits_context_page_url
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_traits_context_fb_fbp
+            data_type: string
+          - name: context_traits_context_fb_event_id
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_context_fb_external_id
+            data_type: string
+          - name: first_name
+            data_type: string
+          - name: external_customer_id
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_traits_context_fb_fbc
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_offline
+            data_type: boolean
+          - name: context_url
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_traits_context_page_height
+            data_type: int64
+          - name: context_source_type
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: timestamp
+            data_type: timestamp
+          - name: order_count
+            data_type: int64
+          - name: context_traits_context_timezone
+            data_type: string
+          - name: address_state_code
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_ip
+            data_type: string
+          - name: context_traits_context_session_id
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_context_fueled_external_id
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_traits_context_locale
+            data_type: string
+          - name: context_traits_context_library_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_context_ga_4_user_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_traits_context_anonymous_id
+            data_type: string
+          - name: context_traits_context_library_name
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_context_traits_address_country_code
+            data_type: string
+          - name: phone
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_traits_context_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_context_traits_email
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_traits_context_offline
+            data_type: boolean
+          - name: context_traits_context_debug
+            data_type: boolean
+          - name: context_traits_context_user_agent
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_campaign_source
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_traits_created_at
+            data_type: timestamp
+          - name: address_country_code
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_context_page_title
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: last_name
+            data_type: string
+          - name: lifetime_value
+            data_type: int64
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_context_page_referrer
+            data_type: string
+          - name: context_traits_context_os_name
+            data_type: string
+          - name: context_traits_context_referrer
+            data_type: string
+          - name: context_traits_context_page_width
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: created_at
+            data_type: timestamp
+          - name: context_traits_context_ga_4_client_id
+            data_type: string
+
+      - name: newsletter_signup_completed
+        columns:
+          - name: context_traits_email
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_page_referrer
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: event_text
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: email
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: timestamp
+            data_type: timestamp
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: id
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_campaign_term
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: user_id
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+
+      - name: newsletter_signup_completed_view
+        columns:
+          - name: context_traits_email
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_page_referrer
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: event_text
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: email
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: timestamp
+            data_type: timestamp
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: id
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_campaign_term
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: user_id
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+
+      - name: order_cancelled
+        columns:
+          - name: context_source_type
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: loaded_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: cart_id
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: billing_address_postal_code
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: billing_address_address
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: coupon
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: event
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_anonymous_id
+            data_type: string
+          - name: value
+            data_type: float64
+          - name: status
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: billing_address_phone
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: revenue
+            data_type: float64
+          - name: subtotal
+            data_type: float64
+          - name: context_library_name
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: type
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: products
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: total
+            data_type: float64
+          - name: discount
+            data_type: float64
+          - name: event_text
+            data_type: string
+          - name: billing_address_state
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: received_at
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: billing_address_state_code
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_client_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: billing_address_company
+            data_type: string
+
+      - name: order_cancelled_view
+        columns:
+          - name: context_source_type
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: loaded_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: cart_id
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: billing_address_postal_code
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: billing_address_address
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: coupon
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: event
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_anonymous_id
+            data_type: string
+          - name: value
+            data_type: float64
+          - name: status
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: billing_address_phone
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: revenue
+            data_type: float64
+          - name: subtotal
+            data_type: float64
+          - name: context_library_name
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: type
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: products
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: total
+            data_type: float64
+          - name: discount
+            data_type: float64
+          - name: event_text
+            data_type: string
+          - name: billing_address_state
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: received_at
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: billing_address_state_code
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+
+      - name: order_completed
+        columns:
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: billing_address_state_code
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: shipping
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: type
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: subtotal
+            data_type: int64
+          - name: status
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: revenue
+            data_type: int64
+          - name: billing_address_phone
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: id
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: products
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: channel
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: cart_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: billing_address_postal_code
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: billing_address_address
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: event
+            data_type: string
+          - name: total
+            data_type: int64
+          - name: context_destination_id
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: billing_address_state
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: coupon
+            data_type: string
+          - name: billing_address_company
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_client_id
+            data_type: string
+
+      - name: order_completed_view
+        columns:
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: value
+            data_type: int64
+          - name: billing_address_state_code
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: shipping
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: type
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: subtotal
+            data_type: int64
+          - name: status
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: revenue
+            data_type: int64
+          - name: billing_address_phone
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: id
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: products
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: channel
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: cart_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: billing_address_postal_code
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: billing_address_address
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: event
+            data_type: string
+          - name: total
+            data_type: int64
+          - name: context_destination_id
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: billing_address_state
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+
+      - name: order_updated
+        columns:
+          - name: context_library_name
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: value
+            data_type: float64
+          - name: billing_address_address
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: billing_address_postal_code
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: billing_address_state
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: revenue
+            data_type: float64
+          - name: coupon
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: id
+            data_type: string
+          - name: products
+            data_type: string
+          - name: subtotal
+            data_type: int64
+          - name: cart_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: status
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_source
+            data_type: string
+          - name: total
+            data_type: float64
+          - name: context_request_ip
+            data_type: string
+          - name: event
+            data_type: string
+          - name: billing_address_state_code
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: type
+            data_type: string
+          - name: billing_address_phone
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: context_fueled_external_id
+            data_type: string
+          - name: billing_address_company
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_client_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+
+      - name: order_updated_view
+        columns:
+          - name: context_library_name
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: billing_address_country
+            data_type: string
+          - name: value
+            data_type: float64
+          - name: billing_address_address
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_url
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: payment_type
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: order_id
+            data_type: string
+          - name: billing_address_postal_code
+            data_type: string
+          - name: billing_address_country_code
+            data_type: string
+          - name: billing_address_state
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: revenue
+            data_type: float64
+          - name: coupon
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: billing_address_last_name
+            data_type: string
+          - name: id
+            data_type: string
+          - name: products
+            data_type: string
+          - name: subtotal
+            data_type: int64
+          - name: cart_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: billing_address_first_name
+            data_type: string
+          - name: status
+            data_type: string
+          - name: billing_address_city
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_source
+            data_type: string
+          - name: total
+            data_type: float64
+          - name: context_request_ip
+            data_type: string
+          - name: event
+            data_type: string
+          - name: billing_address_state_code
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: type
+            data_type: string
+          - name: billing_address_phone
+            data_type: string
+          - name: discount
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: channel
+            data_type: string
+
+      - name: pages
+        columns:
+          - name: context_destination_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: sent_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: search
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: path
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: height
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_debug
+            data_type: boolean
+          - name: context_page_width
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: title
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: width
+            data_type: int64
+          - name: context_session_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_page_search
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: name
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: _hash
+            data_type: string
+          - name: context_campaign_te
+            data_type: boolean
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_campaign_email
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_campaign_sou
+            data_type: boolean
+          - name: context_campaign_var
+            data_type: string
+          - name: context_campaign_ad_group
+            data_type: string
+          - name: context_campaign_referrer
+            data_type: boolean
+          - name: context_campaign_expid
+            data_type: string
+          - name: context_campaign_campgaign
+            data_type: string
+          - name: context_campaign_page
+            data_type: string
+
+      - name: pages_view
+        columns:
+          - name: context_destination_id
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: sent_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: search
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: path
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: height
+            data_type: int64
+          - name: context_ip
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_debug
+            data_type: boolean
+          - name: context_page_width
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: title
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: width
+            data_type: int64
+          - name: context_session_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_page_search
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: name
+            data_type: string
+
+      - name: payment_info_entered
+        columns:
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_source_type
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: value
+            data_type: int64
+          - name: received_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: checkout_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_source
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: context_page_path
+            data_type: string
+          - name: products
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_initialized
+            data_type: boolean
+          - name: user_id
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: affiliation
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_campaign_source
+            data_type: boolean
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_phone
+            data_type: string
+
+      - name: payment_info_entered_view
+        columns:
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_source_type
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event
+            data_type: string
+          - name: tax
+            data_type: int64
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: value
+            data_type: int64
+          - name: received_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: checkout_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_source
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: shipping
+            data_type: int64
+          - name: context_page_path
+            data_type: string
+          - name: products
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_initialized
+            data_type: boolean
+          - name: user_id
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: affiliation
+            data_type: string
+
+      - name: product_added
+        columns:
+          - name: context_offline
+            data_type: boolean
+          - name: brand
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_page_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_campaign_term
+            data_type: string
+          - name: id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: product_id
+            data_type: int64
+          - name: context_destination_type
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+          - name: category
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: variant
+            data_type: string
+          - name: quantity
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_campaign_source
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: price
+            data_type: int64
+          - name: context_locale
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: currency
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: image_url
+            data_type: string
+          - name: variant_id
+            data_type: int64
+          - name: variant_title
+            data_type: string
+          - name: tags
+            data_type: string
+          - name: merchant_center_product_id
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+
+      - name: product_added_view
+        columns:
+          - name: context_offline
+            data_type: boolean
+          - name: brand
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_page_url
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_campaign_term
+            data_type: string
+          - name: id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: product_id
+            data_type: int64
+          - name: context_destination_type
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_source_id
+            data_type: string
+          - name: category
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: variant
+            data_type: string
+          - name: quantity
+            data_type: int64
+          - name: context_os_name
+            data_type: string
+          - name: name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_campaign_source
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: price
+            data_type: int64
+          - name: context_locale
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: currency
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+
+      - name: product_clicked
+        columns:
+          - name: channel
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_page_referrer
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_page_width
+            data_type: int64
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_os_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: tags
+            data_type: string
+          - name: image_url
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: event
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: merchant_center_product_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: product_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: position
+            data_type: int64
+          - name: variant
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: name
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: brand
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_ip
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: variant_id
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_page_url
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: category
+            data_type: string
+          - name: price
+            data_type: int64
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_campaign_term
+            data_type: boolean
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+
+      - name: product_clicked_view
+        columns:
+          - name: channel
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: id
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_page_referrer
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_page_width
+            data_type: int64
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_os_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: tags
+            data_type: string
+          - name: image_url
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: event
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: merchant_center_product_id
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: product_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: position
+            data_type: int64
+          - name: variant
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: name
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: brand
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_ip
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: variant_id
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_page_url
+            data_type: string
+
+      - name: product_list_viewed
+        columns:
+          - name: context_app
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_page_url
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_initialized
+            data_type: boolean
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_referrer
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: context_page_path
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event
+            data_type: string
+          - name: id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: received_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_source_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_destination_type
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_campaign_name
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_campaign_term
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_order_count
+            data_type: int64
+          - name: context_fb_event_id
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: category
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: products
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: list_id
+            data_type: string
+
+      - name: product_list_viewed_view
+        columns:
+          - name: context_app
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_page_url
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_initialized
+            data_type: boolean
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_referrer
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: context_page_path
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event
+            data_type: string
+          - name: id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: received_at
+            data_type: timestamp
+          - name: user_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_source_id
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_destination_type
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_source_type
+            data_type: string
+
+      - name: product_viewed
+        columns:
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: name
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: category
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_height
+            data_type: int64
+          - name: user_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: price
+            data_type: int64
+          - name: brand
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: variant_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: product_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: merchant_center_product_id
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_page_url
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_library_version
+            data_type: string
+          - name: variant
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: variant_name
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: event
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: image_url
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_timezone
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_campaign_medium
+            data_type: string
+          - name: context_traits_address_street
+            data_type: string
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_campaign_gclid
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_campaign_source
+            data_type: string
+          - name: context_campaign_id
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_campaign_term
+            data_type: boolean
+          - name: context_campaign_name
+            data_type: string
+          - name: context_campaign_content
+            data_type: string
+          - name: context_traits_name
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_lifetime_value
+            data_type: int64
+          - name: context_traits_order_count
+            data_type: int64
+          - name: collections
+            data_type: string
+          - name: tags
+            data_type: string
+          - name: product_image_url
+            data_type: string
+          - name: product_product_id
+            data_type: int64
+          - name: product_url
+            data_type: string
+          - name: product_brand
+            data_type: string
+          - name: product_sku
+            data_type: string
+          - name: product_name
+            data_type: string
+
+      - name: product_viewed_view
+        columns:
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_locale
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: name
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: category
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: url
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_height
+            data_type: int64
+          - name: user_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: price
+            data_type: int64
+          - name: brand
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: sku
+            data_type: string
+          - name: variant_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: product_id
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: merchant_center_product_id
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_page_url
+            data_type: string
+          - name: currency
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_library_version
+            data_type: string
+          - name: variant
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: variant_name
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: event
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: image_url
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_version
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_timezone
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_destination_id
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+
+      - name: products_searched
+        columns:
+          - name: context_version
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: query
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_traits_name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_traits_address_street
+            data_type: string
+          - name: id
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_url
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_traits_address_postal_code
+            data_type: string
+          - name: context_page_hash
+            data_type: string
+          - name: context_campaign_klaviyo_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_traits_visitor_type
+            data_type: string
+          - name: context_traits_address_country
+            data_type: string
+          - name: context_traits_phone
+            data_type: string
+
+      - name: products_searched_view
+        columns:
+          - name: context_version
+            data_type: string
+          - name: context_referrer
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_traits_last_name
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_offline
+            data_type: boolean
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_traits_address_city
+            data_type: string
+          - name: context_traits_email
+            data_type: string
+          - name: query
+            data_type: string
+          - name: context_page_title
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_page_referrer
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_session_id
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: context_timezone
+            data_type: string
+          - name: context_os_name
+            data_type: string
+          - name: context_library_version
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_page_width
+            data_type: int64
+          - name: context_traits_first_name
+            data_type: string
+          - name: context_page_path
+            data_type: string
+          - name: context_user_agent
+            data_type: string
+          - name: context_page_search
+            data_type: string
+          - name: context_fb_event_id
+            data_type: string
+          - name: context_debug
+            data_type: boolean
+          - name: context_traits_shopify_customer_id
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_destination_type
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: timestamp
+            data_type: timestamp
+          - name: context_traits_external_customer_id
+            data_type: string
+          - name: context_traits_address_country_code
+            data_type: string
+          - name: context_request_ip
+            data_type: string
+          - name: context_app
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: context_initialized
+            data_type: boolean
+          - name: context_traits_name
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_traits_address_state_code
+            data_type: string
+          - name: context_page_height
+            data_type: int64
+          - name: context_traits_address_street
+            data_type: string
+          - name: id
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: context_page_url
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_traits_address_state
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: context_destination_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_traits_address_postal_code
+            data_type: string
+
+      - name: rudder_discards
+        columns:
+          - name: column_value
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: uuid_ts
+            data_type: timestamp
+          - name: table_name
+            data_type: string
+          - name: row_id
+            data_type: string
+          - name: column_name
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+
+      - name: rudder_discards_view
+        columns:
+          - name: column_value
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: uuid_ts
+            data_type: timestamp
+          - name: table_name
+            data_type: string
+          - name: row_id
+            data_type: string
+          - name: column_name
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+
+      - name: tracks
+        columns:
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_request_ip
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_url
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: context_destination_id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_library_version
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string
+          - name: context_client_id
+            data_type: string
+          - name: context_session_id
+            data_type: string
+
+      - name: tracks_view
+        columns:
+          - name: context_ga_4_user_id
+            data_type: string
+          - name: context_library_name
+            data_type: string
+          - name: context_fb_external_id
+            data_type: string
+          - name: context_fb_fbp
+            data_type: string
+          - name: context_ga_4_client_id
+            data_type: string
+          - name: context_anonymous_id
+            data_type: string
+          - name: context_rudderstack_source
+            data_type: string
+          - name: sent_at
+            data_type: timestamp
+          - name: timestamp
+            data_type: timestamp
+          - name: context_user_agent
+            data_type: string
+          - name: context_source_type
+            data_type: string
+          - name: context_ip
+            data_type: string
+          - name: received_at
+            data_type: timestamp
+          - name: context_locale
+            data_type: string
+          - name: event_text
+            data_type: string
+          - name: context_endpoint_version
+            data_type: string
+          - name: context_fueled_external_id
+            data_type: string
+          - name: uuid_ts
+            data_type: timestamp
+          - name: context_request_ip
+            data_type: string
+          - name: event
+            data_type: string
+          - name: context_source_id
+            data_type: string
+          - name: channel
+            data_type: string
+          - name: context_ga_4_session_id
+            data_type: string
+          - name: context_user_id
+            data_type: string
+          - name: context_fb_fbc
+            data_type: string
+          - name: context_destination_type
+            data_type: string
+          - name: context_url
+            data_type: string
+          - name: context_source
+            data_type: string
+          - name: context_tracking_consent
+            data_type: boolean
+          - name: context_destination_id
+            data_type: string
+          - name: user_id
+            data_type: string
+          - name: original_timestamp
+            data_type: timestamp
+          - name: context_library_version
+            data_type: string
+          - name: loaded_at
+            data_type: timestamp
+          - name: id
+            data_type: string
+          - name: context_passed_ip
+            data_type: string

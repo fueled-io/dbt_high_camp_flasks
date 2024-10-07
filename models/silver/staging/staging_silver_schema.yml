@@ -1,0 +1,145 @@
+version: 2
+
+models:
+  - name: stag_amazon_orders
+
+  - name: stg_coffee_line_items
+    description: "Aggregated view of order line items containing coffee products."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        data_tests:
+          - not_null
+          - unique
+      - name: contains_coffee_sku
+        description: "Boolean indicating if the order contains any coffee SKU."
+        data_tests:
+          - not_null
+      - name: coffee_units_count
+        description: "Total quantity of coffee units in the order."
+        data_tests:
+          - not_null
+      - name: one_time_caramel_units_sold
+        description: "Total quantity of one-time purchase Caramel units in the order."
+        data_tests:
+          - not_null
+      - name: subscription_caramel_units_sold
+        description: "Total quantity of subscription purchase Caramel units in the order."
+        data_tests:
+          - not_null
+      - name: one_time_mocha_units_sold
+        description: "Total quantity of one-time purchase Mocha Latte units in the order."
+        data_tests:
+          - not_null
+      - name: subscription_mocha_units_sold
+        description: "Total quantity of subscription purchase Mocha Latte units in the order."
+        data_tests:
+          - not_null
+      - name: one_time_caramel_units_subtotal
+        description: "Subtotal price for Caramel units in the order."
+        data_tests:
+          - not_null
+      - name: one_time_mocha_units_subtotal
+        description: "Subtotal price for Mocha Latte units in the order."
+        data_tests:
+          - not_null
+
+  - name: stg_customer_calculated_traits
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_customer_most_recent_address
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_customer_tag_counts
+    columns:
+      - name: customer_id
+        description: Unique identifier for the customer.
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_oatbiz_sku_details
+    columns:
+      - name: sku
+        data_tests:
+          - unique
+          - not_null
+      - name: oatbiz_product_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_oatbiz_sku_purchase_notes
+    columns:
+      - name: oatbiz_customer_product_note_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_oatbiz_sku_purchase_ratings
+    columns:
+      - name: oatbiz_customer_product_rating_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_oatbiz_sku_purchases
+    columns:
+      - name: oatbiz_sku_purchase_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_product_details
+    columns:
+      - name: sku
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_subscription_line_items
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+      - name: contains_subscription
+        data_tests:
+          - not_null
+
+  - name: stg_subscriptions_at_time_of_order
+    description: "This model captures the subscription status and details at the time an order was created."
+    columns:
+      - name: order_id
+        description: "The unique identifier for the order"
+        data_tests:
+          - not_null
+          - unique
+      - name: shopify_customer_id
+        description: "The unique identifier for the customer in Shopify. This value is used to link orders with customer subscription data."
+      - name: created_timestamp
+        description: "The timestamp when the order was created. This is used to determine the order's time in relation to active subscriptions."
+        data_tests:
+          - not_null
+      - name: subscription_status_at_time_of_order
+        description: |
+          The status of the subscription at the time of the order. The possible values are:
+          - 'Active': Customer had an active subscription at the time of the order.
+          - 'Churned': Customer had a subscription that was canceled before the order.
+          - 'Non-subscriber': Customer did not have any subscriptions at the time of the order.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ["active", "churned", "non-subscriber"]
+      - name: active_subscriptions
+        description: "An array of subscription IDs that were active for the customer at the time of the order. This helps in understanding which subscriptions were relevant at the time of the purchase."

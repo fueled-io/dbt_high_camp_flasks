@@ -1,0 +1,3 @@
+packages:
+  - git: 'https://github.com/airbytehq/airbyte-dbt-models.git'
+    subdirectory: 'connectors/source_facebook_marketing'

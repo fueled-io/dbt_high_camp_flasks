@@ -7,11 +7,11 @@ SELECT
 FROM (
     SELECT
         customer_id,
-        FIRST_VALUE(referring_site) OVER (PARTITION BY customer_id ORDER BY created_timestamp) AS first_order_referring_site,
-        FIRST_VALUE(created_timestamp) OVER (PARTITION BY customer_id ORDER BY created_timestamp) AS first_order_timestamp,
-        FIRST_VALUE(referring_site) OVER (PARTITION BY customer_id ORDER BY created_timestamp DESC) AS most_recent_order_referring_site,
-        FIRST_VALUE(created_timestamp) OVER (PARTITION BY customer_id ORDER BY created_timestamp DESC) AS most_recent_order_timestamp,
-        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY created_timestamp) AS row_num
+        FIRST_VALUE(referring_site) OVER (PARTITION BY customer_id ORDER BY created_at_timestamp) AS first_order_referring_site,
+        FIRST_VALUE(created_at_timestamp) OVER (PARTITION BY customer_id ORDER BY created_at_timestamp) AS first_order_timestamp,
+        FIRST_VALUE(referring_site) OVER (PARTITION BY customer_id ORDER BY created_at_timestamp DESC) AS most_recent_order_referring_site,
+        FIRST_VALUE(created_at_timestamp) OVER (PARTITION BY customer_id ORDER BY created_at_timestamp DESC) AS most_recent_order_timestamp,
+        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY created_at_timestamp) AS row_num
     FROM {{ ref("shopify__orders") }}
     WHERE customer_id IS NOT NULL -- Ensure customer_id is not null
 )

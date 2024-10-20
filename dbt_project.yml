@@ -21,10 +21,3 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_packages"
   
 vars:
-  facebook_ads_schema: meta_ads_airbyte
-  google_ads_schema: google_ads_airbyte
-  airbyte_google_ads.ad_group_ad_report: "{{ source('airbyte_google_ads', 'ad_group_ad_report') }}"
-  airbyte_google_ads.ad_groups: "{{ source('airbyte_google_ads', 'ad_groups') }}"
-  airbyte_google_ads.campaigns: "{{ source('airbyte_google_ads', 'campaigns') }}"
-  airbyte_google_ads.click_view: "{{ source('airbyte_google_ads', 'click_view') }}"
-  airbyte_google_ads.keyword_report: "{{ source('airbyte_google_ads', 'keyword_report') }}"

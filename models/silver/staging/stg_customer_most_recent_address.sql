@@ -11,7 +11,7 @@ WITH ranked_orders AS (
         billing_address_country AS billing_country,
         billing_address_country_code AS billing_country_code,
         ROW_NUMBER()
-            OVER (PARTITION BY customer_id ORDER BY created_timestamp DESC)
+            OVER (PARTITION BY customer_id ORDER BY created_at_timestamp DESC)
             AS row_num
     FROM {{ ref("shopify__orders") }}
     WHERE customer_id IS NOT NULL -- Exclude rows with null customer_id

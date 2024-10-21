@@ -1,6 +1,9 @@
 -- Technically, SKU is not a unique parameter in Shopify's data model.
 -- Two variants can have the same SKU. Therefore, we grab the most recently updated
 -- variant for each SKU to get pricing. It's not perfect, and should be refactored.
+
+{{ config(enabled=false) }}
+
 with
     ranked_variants as (
         select

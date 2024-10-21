@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: shopify_prod_airbyte
+    schema: "shopify_prod_airbyte"
+    database: "high-camp-flasks"
+    tables:
+      - name: customers
+      - name: orders
+      - name: products
+      - name: product_variants
+      - name: order_refunds
+      - name: transactions

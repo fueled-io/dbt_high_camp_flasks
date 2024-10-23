@@ -6,7 +6,7 @@ with
 
         select
             ad_group_id,
-            campaign_id,
+            campaign_id as ad_campaign_id,
             ad_group_name,
             ad_group_type,
             segments_date,

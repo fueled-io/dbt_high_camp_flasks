@@ -3,7 +3,7 @@ SELECT
     c.campaign_name,
     c.campaign_status,
     ad.segments_date,
-    ad.total_ad_spend,   -- Adding spend information for further aggregation at the gold level
+    ad.total_ad_spend,
     c.campaign_advertising_channel_type,
     c.campaign_advertising_channel_sub_type,
     c.segments_ad_network_type,

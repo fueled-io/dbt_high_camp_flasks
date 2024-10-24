@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: google_ads_campaigns_summary_stats
+    description: "Campaign-level summary statistics for Google Ads campaigns, including clicks, impressions, and conversions."
+    columns:
+      - name: campaign_id
+        description: "Unique identifier for the campaign."
+        data_tests:
+          - not_null
+      - name: campaign_name
+        description: "Name of the campaign as recorded in Google Ads."
+      - name: campaign_status
+        description: "Current status of the campaign (e.g., ENABLED, PAUSED, REMOVED)."
+      - name: campaign_advertising_channel_type
+        description: "Advertising channel type for the campaign (e.g., SEARCH, DISPLAY)."
+      - name: campaign_advertising_channel_sub_type
+        description: "Advertising channel subtype for the campaign, providing additional categorization."
+      - name: segments_ad_network_type
+        description: "Type of ad network used for the campaign (e.g., SEARCH, CONTENT)."
+      - name: segments_date
+        description: "Date for which the campaign metrics are reported."
+        data_tests:
+          - not_null
+      - name: total_clicks
+        description: "Total number of clicks for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_impressions
+        description: "Total number of impressions for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_conversions
+        description: "Total number of conversions for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_conversions_value
+        description: "Total value of conversions for the campaign on the given day."
+        data_tests:
+          - not_null
+
+  - name: google_ads_campaigns
+    description: "Aggregated campaign-level data for Google Ads, including spend and advertising metrics."
+    columns:
+      - name: ad_group_campaign_id
+        description: "Unique identifier for the campaign, coming from ad group data."
+        data_tests:
+          - not_null
+      - name: campaign_name
+        description: "Name of the campaign as recorded in Google Ads."
+      - name: campaign_status
+        description: "Current status of the campaign (e.g., ENABLED, PAUSED, REMOVED)."
+      - name: segments_date
+        description: "Date for which the campaign metrics are reported."
+        data_tests:
+          - not_null
+      - name: total_ad_spend
+        description: "Total spend for the campaign, aggregated from ad group spend data."
+        data_tests:
+          - not_null
+      - name: campaign_advertising_channel_type
+        description: "Advertising channel type for the campaign (e.g., SEARCH, DISPLAY)."
+      - name: campaign_advertising_channel_sub_type
+        description: "Advertising channel subtype for the campaign, providing additional categorization."
+      - name: segments_ad_network_type
+        description: "Type of ad network used for the campaign (e.g., SEARCH, CONTENT)."
+      - name: total_clicks
+        description: "Total number of clicks for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_impressions
+        description: "Total number of impressions for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_conversions
+        description: "Total number of conversions for the campaign on the given day."
+        data_tests:
+          - not_null
+      - name: total_conversions_value
+        description: "Total value of conversions for the campaign on the given day."
+        data_tests:
+          - not_null

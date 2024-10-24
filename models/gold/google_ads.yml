@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: google_ads_campaign_reporting
+    description: "Daily campaign-level summary metrics for Google Ads campaigns, providing reporting-ready insights."
+    columns:
+      - name: campaign_id
+        description: "Unique identifier for the campaign."
+        tests:
+          - not_null
+      - name: campaign_name
+        description: "Name of the campaign as recorded in Google Ads."
+      - name: campaign_status
+        description: "Current status of the campaign (e.g., ENABLED, PAUSED, REMOVED)."
+      - name: segments_date
+        description: "Date for which the campaign metrics are reported."
+        tests:
+          - not_null
+      - name: daily_ad_spend
+        description: "Total daily spend for the campaign, rounded to the nearest hundredth."
+      - name: total_daily_clicks
+        description: "Total number of clicks for the campaign on the given day."
+      - name: total_daily_impressions
+        description: "Total number of impressions for the campaign on the given day."
+      - name: total_daily_conversions
+        description: "Total number of conversions for the campaign on the given day."
+      - name: total_daily_conversions_value
+        description: "Total value of conversions for the campaign on the given day."

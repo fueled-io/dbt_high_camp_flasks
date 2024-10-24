@@ -5,13 +5,4 @@ packages:
     version: 0.8.6
   - package: fivetran/fivetran_utils
     version: 0.3.9
-  - package: dbt-labs/spark_utils
-    version: 0.3.0
-  - git: https://github.com/airbytehq/airbyte-dbt-models.git
-    revision: 4b94f98c58aae5f5709bb009ae38d5e4f5374b00
-    subdirectory: connectors/source_google_ads
-  - package: fivetran/google_ads
-    version: 0.5.0
-  - package: fivetran/google_ads_source
-    version: 0.5.0
-sha1_hash: cf73e8916d7f482b3886bd2e2b7cee26c72e7954
+sha1_hash: 607e5333916afb767bfe5b5e67c0bc44f26d946c

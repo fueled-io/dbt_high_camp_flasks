@@ -42,7 +42,7 @@ models:
   - name: google_ads_campaigns
     description: "Aggregated campaign-level data for Google Ads, including spend and advertising metrics."
     columns:
-      - name: ad_campaign_id
+      - name: ad_group_campaign_id
         description: "Unique identifier for the campaign, coming from ad group data."
         data_tests:
           - not_null

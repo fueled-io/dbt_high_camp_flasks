@@ -1,9 +1,9 @@
 select
     ad_group_id,
-    campaign_id as ad_campaign_id,
+    campaign_id as ad_group_campaign_id,
     ad_group_name,
     ad_group_type,
-    segments_date,
+    segments_date as ad_group_segments_date,
     ad_group_labels,
     ad_group_status,
     ad_group_campaign,

@@ -9,8 +9,7 @@ models:
             - ad_id
             - campaign_id
             - spend_date
-          
-
+        
     columns:
       - name: ad_id
         description: "ID of the ad."

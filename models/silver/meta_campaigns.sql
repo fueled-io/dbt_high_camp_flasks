@@ -1,1 +1,0 @@
-SELECT * FROM {{ ref('stg_meta_ads_campaigns') }}

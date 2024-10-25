@@ -1,21 +1,31 @@
 select
-    ai.ad_id,
-    ai.ad_name,
-    ai.campaign_id,
-    cd.campaign_name,
-    cd.objective,
-    ai.spend_date,
-    ai.daily_spend,
-    ai.daily_clicks,
-    ai.daily_impressions,
-    ai.avg_cpc,
-    ai.avg_cpm,
-    ai.avg_ctr,
-    cd.spend_cap,
-    cd.daily_budget,
-    cd.lifetime_budget,
-    cd.effective_status,
-    cd.buying_type
-from {{ ref("meta_ads_stats") }} ai
-join {{ ref("meta_campaigns") }} cd on ai.campaign_id = cd.campaign_id
-order by ai.spend_date, ai.ad_id
+    ad_id,
+    ad_name,
+    campaign_id,
+    campaign_name,
+    objective,
+    date(date_start) as spend_date,
+    sum(spend) as daily_spend,
+    sum(clicks) as daily_clicks,
+    sum(impressions) as daily_impressions,
+    avg(cpc) as avg_cpc,
+    avg(cpm) as avg_cpm,
+    avg(ctr) as avg_ctr,
+    spend_cap,
+    daily_budget,
+    lifetime_budget,
+    effective_status,
+    buying_type
+from {{ ref("canonical_meta_ads_campaigns") }}
+group by
+    ad_id,
+    ad_name,
+    campaign_id,
+    campaign_name,
+    objective,
+    spend_date,
+    spend_cap,
+    daily_budget,
+    lifetime_budget,
+    effective_status,
+    buying_type

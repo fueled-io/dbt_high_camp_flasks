@@ -21,7 +21,7 @@
         unique_ctr,
         auction_bid,
         buying_type,
-        campaign_id,
+        campaign_id as ads_insights_campaign_id,
         conversions,
         impressions,
         website_ctr,

@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 select
     ad_group_campaign_id,
     ad_group_id,

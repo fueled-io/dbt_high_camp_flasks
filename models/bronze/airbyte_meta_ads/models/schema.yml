@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: meta_ads_airbyte
-    description: "Source data for Meta marketing analytics, including ads and ads insights."
+    description: "Source data for Meta marketing analytics, including campaigns and ads insights."
     tables:
       - name: ads_insights
         description: "Insights and metrics for marketing ads."

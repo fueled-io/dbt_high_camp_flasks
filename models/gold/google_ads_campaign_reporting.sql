@@ -10,4 +10,4 @@ SELECT
 FROM {{ ref('google_ads_campaigns') }}
 GROUP BY
     campaign_id, campaign_name, campaign_status, segments_date
-ORDER BY campaign_date DESC, campaign_name, campaign_status DESC
+ORDER BY campaign_date DESC, campaign_name DESC

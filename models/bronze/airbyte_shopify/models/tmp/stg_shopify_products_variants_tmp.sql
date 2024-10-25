@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 select
     id as variant_id, 
     created_at as created__at_timestamp,

@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 select
     campaign_id,
     metrics_ctr,

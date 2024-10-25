@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 WITH ranked_orders AS (
     SELECT
         customer_id,

@@ -10,9 +10,7 @@ models:
           - not_null
       - name: campaign_name
         description: "Name of the campaign as recorded in Google Ads."
-      - name: campaign_status
-        description: "Current status of the campaign (e.g., ENABLED, PAUSED, REMOVED)."
-      - name: segments_date
+      - name: campaign_date
         description: "Date for which the campaign metrics are reported."
         tests:
           - not_null

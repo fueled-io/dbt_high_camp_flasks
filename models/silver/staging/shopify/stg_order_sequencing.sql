@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 WITH user_first_order AS (
     -- Get the first order for each customer based on customer_id
     SELECT

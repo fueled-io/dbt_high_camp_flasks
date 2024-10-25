@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 SELECT
     customer_id,
     DATE_DIFF(CURRENT_DATE(), DATE(first_order_timestamp), DAY) AS days_since_first_order,

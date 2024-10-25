@@ -9,5 +9,5 @@ SELECT
     SUM(total_conversions_value) AS total_daily_conversions_value
 FROM {{ ref('google_ads_campaigns') }}
 GROUP BY
-    campaign_id, campaign_name, campaign_status, segments_date
+    campaign_id, campaign_name, segments_date
 ORDER BY campaign_date DESC, campaign_name DESC

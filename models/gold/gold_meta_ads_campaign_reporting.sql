@@ -1,4 +1,4 @@
-SELECT 
+select
     ai.ad_id,
     ai.ad_name,
     ai.campaign_id,
@@ -16,11 +16,6 @@ SELECT
     cd.lifetime_budget,
     cd.effective_status,
     cd.buying_type
-FROM 
-    {{ ref('meta_ads_stats') }} ai
-LEFT JOIN 
-    {{ ref('meta_campaigns') }} cd
-ON 
-    ai.campaign_id = cd.campaign_id
-ORDER BY 
-    ai.spend_date, ai.ad_id
+from {{ ref("meta_ads_stats") }} ai
+join {{ ref("meta_campaigns") }} cd on ai.campaign_id = cd.campaign_id
+order by ai.spend_date, ai.ad_id

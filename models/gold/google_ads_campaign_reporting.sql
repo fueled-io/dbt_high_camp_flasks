@@ -1,8 +1,7 @@
 SELECT
+    segments_date as campaign_date,
     campaign_id,
     campaign_name,
-    campaign_status,
-    segments_date,
     ROUND(SUM(total_ad_spend), 2) AS daily_ad_spend,
     SUM(total_clicks) AS total_daily_clicks,
     SUM(total_impressions) AS total_daily_impressions,
@@ -11,3 +10,4 @@ SELECT
 FROM {{ ref('google_ads_campaigns') }}
 GROUP BY
     campaign_id, campaign_name, campaign_status, segments_date
+ORDER BY campaign_date DESC, campaign_name, campaign_status DESC

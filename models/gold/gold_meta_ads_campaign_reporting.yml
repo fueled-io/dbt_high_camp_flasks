@@ -6,63 +6,24 @@ models:
     tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
-            - ad_id
             - campaign_id
-            - spend_date        
+            - campaign_date        
     columns:
-      - name: ad_id
-        description: "ID of the ad."
-        tests:
-          - not_null
-      - name: ad_name
-        description: "Name of the ad."
-        tests:
-          - not_null
       - name: campaign_id
-        description: "ID of the campaign associated with the ad."
+        description: "ID of the campaign."
         tests:
           - not_null
       - name: campaign_name
         description: "Name of the campaign."
         tests:
           - not_null
-      - name: objective
-        description: "Objective of the campaign."
+      - name: campaign_date
+        description: "Date of the campaign metrics."
         tests:
           - not_null
-      - name: spend_date
-        description: "Date of the spend data."
-        tests:
-          - not_null
-      - name: daily_spend
-        description: "Daily spend on the ad."
-        tests:
-          - not_null
-      - name: daily_clicks
-        description: "Total daily clicks on the ad."
-        tests:
-          - not_null
-      - name: daily_impressions
-        description: "Total daily impressions for the ad."
-        tests:
-          - not_null
-      - name: avg_cpc
-        description: "Average cost per click for the ad."
-      - name: avg_cpm
-        description: "Average cost per thousand impressions for the ad."
-      - name: avg_ctr
-        description: "Average click-through rate for the ad."
-      - name: spend_cap
-        description: "Spending cap for the campaign."
-      - name: daily_budget
-        description: "Daily budget for the campaign."
-      - name: lifetime_budget
-        description: "Lifetime budget for the campaign."
-      - name: effective_status
-        description: "Effective status of the campaign."
-        tests:
-          - not_null
-      - name: buying_type
-        description: "Buying type for the campaign."
-        tests:
-          - not_null
+      - name: daily_ad_spend
+        description: "Total daily spend for the campaign, rounded to the nearest hundredth."
+      - name: total_daily_clicks
+        description: "Total number of clicks for the campaign on the given day."
+      - name: total_daily_impressions
+        description: "Total number of impressions for the campaign on the given day."

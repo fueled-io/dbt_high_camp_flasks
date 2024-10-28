@@ -1,10 +1,10 @@
 
     select
+        ad_id,
         cpc as costs_per_link_click,
         cpm as costs_per_thousand_impressions,
         cpp as costs_per_purchase,
         ctr as click_through_rate,
-        ad_id,
         reach,
         spend,
         clicks,

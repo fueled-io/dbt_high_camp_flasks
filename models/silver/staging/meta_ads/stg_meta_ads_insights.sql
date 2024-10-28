@@ -1,3 +1,5 @@
+{{ config(materialized="ephemeral") }}
+
 select
     ad_id,
     ad_name,

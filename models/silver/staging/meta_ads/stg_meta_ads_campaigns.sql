@@ -1,3 +1,5 @@
+{{ config(materialized="ephemeral") }}
+
 select
     campaign_id,
     campaign_name,

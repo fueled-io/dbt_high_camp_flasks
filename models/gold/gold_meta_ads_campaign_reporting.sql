@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 select
     date(date_start) as campaign_date,
     campaign_id,

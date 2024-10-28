@@ -29,4 +29,4 @@ group by
     lifetime_budget,
     effective_status,
     buying_type
-order by campaign_date desc, spend_date desc
+ORDER BY spend_date DESC, campaign_name DESC

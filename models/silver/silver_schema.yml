@@ -40,3 +40,70 @@ models:
         description: "Total value of conversions for the campaign on the given day."
         data_tests:
           - not_null
+  - name: canonical_meta_ads_campaigns
+    description: "Canonical model that combines ad insights with campaign details for Facebook Ads performance reporting."
+    columns:
+      - name: ad_id
+        description: "ID of the ad."
+        tests:
+          - not_null
+      - name: ad_name
+        description: "Name of the ad."
+        tests:
+          - not_null
+      - name: ads_insights_campaign_id
+        description: "Campaign ID from the ads insights data."
+        tests:
+          - not_null
+      - name: date_start
+        description: "Start date of the ad campaign."
+        tests:
+          - not_null
+      - name: spend
+        description: "Total spend on the ad."
+        tests:
+          - not_null
+      - name: clicks
+        description: "Total number of clicks on the ad."
+        tests:
+          - not_null
+      - name: impressions
+        description: "Total number of impressions for the ad."
+        tests:
+          - not_null
+      - name: cpc
+        description: "Cost per click for the ad."
+      - name: cpm
+        description: "Cost per thousand impressions for the ad."        
+      - name: ctr
+        description: "Click-through rate for the ad."
+      - name: campaign_id
+        description: "ID of the campaign."
+        tests:
+          - not_null
+      - name: campaign_name
+        description: "Name of the campaign."
+        tests:
+          - not_null
+      - name: objective
+        description: "Objective of the campaign."
+        tests:
+          - not_null
+      - name: spend_cap
+        description: "Spending cap for the campaign."
+      - name: start_time
+        description: "Timestamp when the campaign started."
+      - name: stop_time
+        description: "Timestamp when the campaign stopped."
+      - name: daily_budget
+        description: "Daily budget for the campaign."        
+      - name: lifetime_budget
+        description: "Lifetime budget for the campaign."
+      - name: effective_status
+        description: "Effective status of the campaign."
+        tests:
+          - not_null
+      - name: buying_type
+        description: "Buying type for the campaign."
+        tests:
+          - not_null

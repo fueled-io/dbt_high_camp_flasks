@@ -1,0 +1,192 @@
+version: 2
+
+sources:
+  - name: meta_ads_airbyte
+    description: "Source data for Meta marketing analytics, including campaigns and ads insights."
+    tables:
+      - name: ads_insights
+        description: "Insights and metrics for marketing ads."
+        columns:
+          - name: _airbyte_extracted_at
+            description: "Timestamp when the data was extracted by Airbyte."
+          - name: _airbyte_generation_id
+            description: "Generation ID assigned by Airbyte during extraction."
+          - name: _airbyte_meta
+            description: "Metadata field added by Airbyte."
+          - name: _airbyte_raw_id
+            description: "Raw ID added by Airbyte for tracing purposes."
+          - name: account_currency
+            description: "Currency associated with the account."
+          - name: account_id
+            description: "ID of the account associated with the ad insights."
+          - name: account_name
+            description: "Name of the account associated with the ad insights."
+          - name: action_values
+            description: "Values associated with specific actions taken in the ad campaign."
+          - name: actions
+            description: "Actions taken on the ad."
+          - name: ad_click_actions
+            description: "Details about click actions on the ad."
+          - name: ad_id
+            description: "ID of the ad."
+          - name: ad_impression_actions
+            description: "Details about impression actions on the ad."
+          - name: ad_name
+            description: "Name of the ad."
+          - name: adset_id
+            description: "ID of the ad set to which the ad belongs."
+          - name: adset_name
+            description: "Name of the ad set to which the ad belongs."
+          - name: attribution_setting
+            description: "Attribution setting used for the ad insights."
+          - name: auction_bid
+            description: "Bid amount for the auction."
+          - name: auction_competitiveness
+            description: "Competitiveness of the auction for the ad."
+          - name: auction_max_competitor_bid
+            description: "Maximum bid of competitors in the auction."
+          - name: buying_type
+            description: "Buying type for the ad."
+          - name: campaign_id
+            description: "ID of the campaign associated with the ad insights."
+          - name: campaign_name
+            description: "Name of the campaign associated with the ad insights."
+          - name: canvas_avg_view_percent
+            description: "Average view percentage for the canvas ad."
+          - name: canvas_avg_view_time
+            description: "Average view time for the canvas ad."
+          - name: clicks
+            description: "Total number of clicks on the ad."
+          - name: created_time
+            description: "Date when the ad insights were created."
+          - name: ctr
+            description: "Click-through rate for the ad."
+          - name: date_start
+            description: "Start date for the ad insights."
+          - name: date_stop
+            description: "End date for the ad insights."
+          - name: impressions
+            description: "Total number of impressions for the ad."
+          - name: reach
+            description: "Total reach of the ad."
+          - name: spend
+            description: "Total spend on the ad."
+          - name: updated_time
+            description: "Date when the ad insights were last updated."
+      - name: campaigns
+        columns:
+          - name: _airbyte_raw_id
+            description: "Raw ID of the Airbyte record."
+            data_type: STRING
+
+          - name: _airbyte_extracted_at
+            description: "Timestamp when the data was extracted."
+            data_type: TIMESTAMP
+
+          - name: _airbyte_meta
+            description: "Metadata from the Airbyte extraction."
+            data_type: JSON
+
+          - name: _airbyte_generation_id
+            description: "Generation ID for Airbyte extraction."
+            data_type: INTEGER
+
+          - name: id
+            description: "Campaign ID."
+            data_type: STRING
+
+          - name: name
+            description: "Campaign name."
+            data_type: STRING
+
+          - name: status
+            description: "Campaign status."
+            data_type: STRING
+
+          - name: adlabels
+            description: "Labels associated with the ad."
+            data_type: JSON
+
+          - name: objective
+            description: "Campaign objective."
+            data_type: STRING
+
+          - name: spend_cap
+            description: "Spending cap for the campaign."
+            data_type: NUMERIC
+
+          - name: stop_time
+            description: "Stop time for the campaign."
+            data_type: TIMESTAMP
+
+          - name: account_id
+            description: "Account ID associated with the campaign."
+            data_type: STRING
+
+          - name: start_time
+            description: "Start time for the campaign."
+            data_type: TIMESTAMP
+
+          - name: buying_type
+            description: "Buying type for the campaign."
+            data_type: STRING
+
+          - name: issues_info
+            description: "Issues information associated with the campaign."
+            data_type: JSON
+
+          - name: bid_strategy
+            description: "Bid strategy for the campaign."
+            data_type: STRING
+
+          - name: created_time
+            description: "Time when the campaign was created."
+            data_type: TIMESTAMP
+
+          - name: daily_budget
+            description: "Daily budget for the campaign."
+            data_type: NUMERIC
+
+          - name: updated_time
+            description: "Time when the campaign was last updated."
+            data_type: TIMESTAMP
+
+          - name: lifetime_budget
+            description: "Lifetime budget for the campaign."
+            data_type: NUMERIC
+
+          - name: budget_remaining
+            description: "Remaining budget for the campaign."
+            data_type: NUMERIC
+
+          - name: effective_status
+            description: "Effective status of the campaign."
+            data_type: STRING
+
+          - name: boosted_object_id
+            description: "Boosted object ID for the campaign."
+            data_type: STRING
+
+          - name: configured_status
+            description: "Configured status for the campaign."
+            data_type: STRING
+
+          - name: source_campaign_id
+            description: "Source campaign ID for the campaign."
+            data_type: NUMERIC
+
+          - name: special_ad_category
+            description: "Special ad category for the campaign."
+            data_type: STRING
+
+          - name: smart_promotion_type
+            description: "Type of smart promotion for the campaign."
+            data_type: STRING
+
+          - name: budget_rebalance_flag
+            description: "Indicates if budget rebalance is enabled."
+            data_type: BOOLEAN
+
+          - name: special_ad_category_country
+            description: "Countries associated with the special ad category."
+            data_type: JSON

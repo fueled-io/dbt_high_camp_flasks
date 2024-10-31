@@ -1,3 +1,7 @@
+{{ config(
+    materialized='ephemeral'
+) }}
+
 select
     so.order_id,
     so.order_number,
@@ -17,44 +21,25 @@ select
     so.billing_address_zip as billing_zip,
     so.billing_address_country as billing_country,
     so.billing_address_country_code as billing_country_code,
-    -- so.shipping_address_first_name as shipping_first_name,
-    -- so.shipping_address_last_name as shipping_last_name,
-    -- so.shipping_address_phone as shipping_phone,
-    -- so.shipping_address_company as shipping_company,
-    -- so.shipping_address_address_1 as shipping_address_1,
-    -- so.shipping_address_address_2 as shipping_address_2,
-    -- so.shipping_address_city as shipping_address_city,
-    -- so.shipping_address_province as shipping_state,
-    -- so.shipping_address_province_code as shipping_state_code,
-    -- so.shipping_address_zip as shipping_zip,
-    -- so.shipping_address_country as shipping_country,
-    -- so.shipping_address_country_code as shipping_country_code,
     so.subtotal_price,
-    -- so.line_item_count,
     so.total_line_items_price,
     so.total_price,
     so.total_discounts,
-    -- so.total_tax,
-    -- so.total_weight,
-    -- so.refund_subtotal,
-    -- so.order_adjusted_total,
-    -- so.refund_total_tax,
-    -- so.percentage_calc_discount_amount,
-    -- so.fixed_amount_discount_amount,
-    -- so.shipping_discount_amount,
-    -- so.count_discount_codes_applied,
+    so.total_tax,
     so.source_name,
-    -- so.new_vs_repeat,
-    os.customer_order_seq_number,
-    -- so.order_tags,
+    so.tags as order_tags,
     so.financial_status,
     so.fulfillment_status,
     so.cancel_reason,
     so.created_at_timestamp,
-    -- so.processed_timestamp,
     so.updated_timestamp,
     so.cancelled_timestamp,
-    -- First order and sequencing data
+    so.currency,
+    so.total_units_sold,  -- Total quantity of units sold
+    so.total_shipping_fees,  -- Total shipping fees
+    so.total_order_cogs,  -- Total cost of goods sold
+    -- Order sequencing and customer details
+    os.customer_order_seq_number,
     os.first_order_id as customers_first_order_id,
     os.first_order_date as customers_first_order_date,
     os.first_order_marketing_source,
@@ -63,5 +48,9 @@ select
     os.months_between_orders_rounded_down
     as months_rounded_down_between_customers_first_and_current_order
 
-from {{ ref("shopify__orders") }} so
-left join {{ ref("stg_order_sequencing") }} os on so.order_id = os.order_id
+from 
+    {{ ref("shopify__orders") }} so
+left join 
+    {{ ref("stg_order_sequencing") }} os 
+on 
+    so.order_id = os.order_id

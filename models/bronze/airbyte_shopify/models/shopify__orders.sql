@@ -2,80 +2,50 @@
     materialized='ephemeral'
 ) }}
 
-with orders as (
-    select
-        order_id,
-        order_number,
-        customer_id,
-        email,
-        created_at_timestamp,
-        updated_at,
-        cancelled_at,
-        source_name,
-        total_line_items_price,
-        subtotal_price,
-        total_discounts,
-        total_price,
-        financial_status,
-        currency,
-        referring_site,
-        landing_site_base_url,
-        fulfillment_status,
-        cancel_reason,
-        billing_address_1 as billing_address_address_1,
-        billing_address_2 as billing_address_address_2,
-        billing_city as billing_address_city,
-        billing_company as billing_address_company,
-        billing_country as billing_address_country,
-        billing_country_code as billing_address_country_code,
-        billing_first_name as billing_address_first_name,
-        billing_last_name as billing_address_last_name,
-        billing_latitude as billing_address_latitude,
-        billing_longitude as billing_address_longitude,
-        billing_name as billing_address_name,
-        billing_phone as billing_address_phone,
-        billing_province as billing_address_province,
-        billing_province_code as billing_address_province_code,
-        billing_zip as billing_address_zip
-    from {{ ref('stg_shopify_orders_tmp') }}
-),
-
-final_orders as (
-    select
-        orders.order_id,
-        orders.order_number,
-        orders.customer_id,
-        orders.email,
-        orders.created_at_timestamp,
-        orders.updated_at as updated_timestamp,
-        orders.cancelled_at as cancelled_timestamp,
-        orders.source_name,
-        orders.total_line_items_price,
-        orders.subtotal_price,
-        orders.total_discounts,
-        orders.total_price,
-        orders.financial_status,
-        orders.currency,
-        orders.referring_site,
-        orders.landing_site_base_url,
-        orders.fulfillment_status,
-        orders.cancel_reason,
-        orders.billing_address_address_1,
-        orders.billing_address_address_2,
-        orders.billing_address_city,
-        orders.billing_address_company,
-        orders.billing_address_country,
-        orders.billing_address_country_code,
-        orders.billing_address_first_name,
-        orders.billing_address_last_name,
-        orders.billing_address_latitude,
-        orders.billing_address_longitude,
-        orders.billing_address_name,
-        orders.billing_address_phone,
-        orders.billing_address_province,
-        orders.billing_address_province_code,
-        orders.billing_address_zip
-    from orders
-)
-
-select * from final_orders
+select
+    o.order_id,
+    o.order_number,
+    o.customer_id,
+    o.email,
+    o.created_at_timestamp,
+    o.updated_at as updated_timestamp,
+    o.cancelled_at as cancelled_timestamp,
+    o.source_name,
+    u.total_quantity as total_units_sold,  -- Added total_quantity from the units sold table
+    o.total_line_items_price,
+    o.subtotal_price,
+    o.total_price,
+    o.total_discounts,
+    o.total_tax,
+    c.total_order_cogs,
+    o.currency,
+    s.total_shipping_fees,  -- Added total_shipping_fee from stg_shopify_orders_tmp.sql
+    o.financial_status,
+    o.fulfillment_status,
+    o.cancel_reason,
+    o.tags,
+    o.referring_site,
+    o.landing_site_base_url,
+    o.billing_address_1 as billing_address_address_1,
+    o.billing_address_2 as billing_address_address_2,
+    o.billing_city as billing_address_city,
+    o.billing_company as billing_address_company,
+    o.billing_country as billing_address_country,
+    o.billing_country_code as billing_address_country_code,
+    o.billing_first_name as billing_address_first_name,
+    o.billing_last_name as billing_address_last_name,
+    o.billing_latitude as billing_address_latitude,
+    o.billing_longitude as billing_address_longitude,
+    o.billing_name as billing_address_name,
+    o.billing_phone as billing_address_phone,
+    o.billing_province as billing_address_province,
+    o.billing_province_code as billing_address_province_code,
+    o.billing_zip as billing_address_zip
+from 
+    {{ ref('stg_shopify_orders_tmp') }} as o
+left join 
+    {{ ref('stg_shopify_orders_units_sold_tmp') }} as u on o.order_id = u.order_id
+left join 
+    {{ ref('stg_shopify_orders_shipping_fees_tmp') }} as s on o.order_id = s.order_id
+left join
+    {{ ref('stg_shopify_orders_cogs_tmp')}} as c on o.order_id = c.order_id

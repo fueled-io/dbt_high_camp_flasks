@@ -17,6 +17,7 @@ select
     o.total_price,
     o.total_discounts,
     o.total_tax,
+    r.total_refund_amount,
     c.total_order_cogs,
     o.currency,
     s.total_shipping_fees,  -- Added total_shipping_fee from stg_shopify_orders_tmp.sql
@@ -49,3 +50,5 @@ left join
     {{ ref('stg_shopify_orders_shipping_fees_tmp') }} as s on o.order_id = s.order_id
 left join
     {{ ref('stg_shopify_orders_cogs_tmp')}} as c on o.order_id = c.order_id
+left join
+    {{ ref('stg_shopify_refunds_tmp')}} as r on o.order_id = r.order_id

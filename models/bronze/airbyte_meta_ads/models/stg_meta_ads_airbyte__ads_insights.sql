@@ -2,6 +2,9 @@
 
 select
     ad_id,
+    adset_id,
+    date_start,
+    date_stop,
     cpc as costs_per_link_click,
     cpm as costs_per_thousand_impressions,
     cpp as costs_per_purchase,
@@ -11,14 +14,11 @@ select
     clicks,
     actions,
     ad_name,
-    adset_id,
     wish_bid,
-    date_stop,
     frequency,
     objective,
     account_id,
     adset_name,
-    date_start,
     unique_ctr,
     auction_bid,
     buying_type,
@@ -105,3 +105,4 @@ select
     catalog_segment_value_website_purchase_roas
 
 from {{ source("meta_ads_airbyte", "ads_insights") }}
+order by spend desc, ad_id desc, date_start desc, date_stop desc

@@ -26,6 +26,7 @@ select
     so.total_price,
     so.total_discounts,
     so.total_tax,
+    so.total_refund_amount,
     so.source_name,
     so.tags as order_tags,
     so.financial_status,

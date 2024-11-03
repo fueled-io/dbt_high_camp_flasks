@@ -1,7 +1,7 @@
 {{ config(materialized="table") }}
 
 SELECT
-    date_start,
+    date_start as campaign_date,
     --ad_id,
     ads_insights_campaign_id AS campaign_id,
     SUM(spend) AS daily_ad_spend,

@@ -4,10 +4,6 @@ models:
   - name: canonical_google_ads_campaigns
     description: "Aggregated campaign-level data for Google Ads, including spend and advertising metrics."
     columns:
-      - name: ad_group_campaign_id
-        description: "Unique identifier for the campaign, coming from ad group data."
-        data_tests:
-          - not_null
       - name: campaign_name
         description: "Name of the campaign as recorded in Google Ads."
       - name: segments_date

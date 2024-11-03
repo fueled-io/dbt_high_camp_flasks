@@ -1,5 +1,41 @@
 {{ config(materialized="table") }}
 
 select 
-    co.*,
-from {{ ref("canonical_orders") }} co
+    created_at_timestamp,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', created_at_timestamp, 'America/Los_Angeles')) as created_at_timestamp_pt,
+    order_id,
+    order_number,
+    customer_id,
+    billing_address_city as billing_city,
+    billing_state,
+    billing_country,
+    subtotal_price,
+    total_line_items_price,
+    total_price,
+    total_discounts,
+    total_tax,
+    total_shipping_fees,
+    total_refund_amount,
+    total_order_cogs,
+    currency,
+    order_tags,
+    total_units_sold,
+    customer_order_seq_number,
+    financial_status,
+    fulfillment_status,
+    cancel_reason,
+    cancelled_timestamp,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', cancelled_timestamp, 'America/Los_Angeles')) as cancelled_timestamp_pt,
+    source_name,
+    referring_site,
+    landing_site_base_url,
+    customers_first_order_id,
+    customers_first_order_date,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', customers_first_order_date, 'America/Los_Angeles')) as customers_first_order_date_pt,
+    first_order_marketing_source,
+    first_order_marketing_medium,
+    days_between_customers_first_and_current_order,
+    months_rounded_down_between_customers_first_and_current_order
+
+from {{ ref("canonical_orders") }}
+order by created_at_timestamp desc

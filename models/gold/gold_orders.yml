@@ -1,0 +1,110 @@
+version: 2
+
+models:
+  - name: gold_orders
+    description: "This model aggregates and transforms order data with timestamps converted to Pacific Time."
+    columns:
+      - name: created_at_timestamp
+        description: "Timestamp of when the order was created in UTC."
+
+      - name: created_at_timestamp_pt
+        description: "Timestamp of when the order was created, converted to Pacific Time."
+
+      - name: order_id
+        description: "Unique identifier for the order."
+
+      - name: order_number
+        description: "Order number as displayed to customers."
+
+      - name: customer_id
+        description: "Unique identifier for the customer."
+
+      - name: billing_city
+        description: "City from the billing address."
+
+      - name: billing_state
+        description: "State from the billing address."
+
+      - name: billing_country
+        description: "Country from the billing address."
+
+      - name: subtotal_price
+        description: "Subtotal price of the order."
+
+      - name: total_line_items_price
+        description: "Total price of all line items in the order."
+
+      - name: total_price
+        description: "Total price of the order including taxes and fees."
+
+      - name: total_discounts
+        description: "Total discounts on the order."
+
+      - name: total_tax
+        description: "Total tax amount applied to the order."
+
+      - name: total_shipping_fees
+        description: "Total shipping fees for the order."
+
+      - name: total_refund_amount
+        description: "Total value of refunds on the order."
+
+      - name: total_order_cogs
+        description: "Total cost of goods sold for the order."
+
+      - name: currency
+        description: "Currency in which the order was processed."
+
+      - name: order_tags
+        description: "Tags associated with the order."
+
+      - name: total_units_sold
+        description: "Total number of units sold in the order."
+
+      - name: customer_order_seq_number
+        description: "Sequence number of the order for the customer."
+
+      - name: financial_status
+        description: "Financial status of the order (e.g., paid, pending)."
+
+      - name: fulfillment_status
+        description: "Fulfillment status of the order (e.g., fulfilled, unfulfilled)."
+
+      - name: cancel_reason
+        description: "Reason the order was cancelled, if applicable."
+
+      - name: cancelled_timestamp
+        description: "Timestamp of when the order was cancelled in UTC."
+
+      - name: cancelled_timestamp_pt
+        description: "Timestamp of when the order was cancelled, converted to Pacific Time."
+
+      - name: source_name
+        description: "Source from which the order originated."
+
+      - name: referring_site
+        description: "Referring site for the order."
+
+      - name: landing_site_base_url
+        description: "Base URL of the landing site for the order."
+
+      - name: customers_first_order_id
+        description: "ID of the customer's first order."
+
+      - name: customers_first_order_date
+        description: "Date of the customer's first order in UTC."
+
+      - name: customers_first_order_date_pt
+        description: "Date of the customer's first order, converted to Pacific Time."
+
+      - name: first_order_marketing_source
+        description: "Marketing source for the customer's first order."
+
+      - name: first_order_marketing_medium
+        description: "Marketing medium for the customer's first order."
+
+      - name: days_between_customers_first_and_current_order
+        description: "Number of days between the customer's first and current order."
+
+      - name: months_rounded_down_between_customers_first_and_current_order
+        description: "Number of months (rounded down) between the customer's first and current order."

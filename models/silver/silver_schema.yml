@@ -1,75 +1,101 @@
 version: 2
 
 models:
-  - name: canonical_google_ads_campaigns
-    description: "Aggregated campaign-level data for Google Ads, including spend and advertising metrics."
+  - name: canonical_orders
+    description: "A comprehensive model that consolidates order-level data, including customer details, billing information, financial metrics, and sequencing insights."
     columns:
-      - name: campaign_name
-        description: "Name of the campaign as recorded in Google Ads."
-      - name: segments_date
-        description: "Date for which the campaign metrics are reported."
-        data_tests:
-          - not_null
-      - name: total_ad_spend
-        description: "Total spend for the campaign, aggregated from ad group spend data."
-        data_tests:
-          - not_null
-      - name: campaign_advertising_channel_type
-        description: "Advertising channel type for the campaign (e.g., SEARCH, DISPLAY)."
-      - name: campaign_advertising_channel_sub_type
-        description: "Advertising channel subtype for the campaign, providing additional categorization."
-      - name: segments_ad_network_type
-        description: "Type of ad network used for the campaign (e.g., SEARCH, CONTENT)."
-      - name: total_clicks
-        description: "Total number of clicks for the campaign on the given day."
-        data_tests:
-          - not_null
-      - name: total_impressions
-        description: "Total number of impressions for the campaign on the given day."
-        data_tests:
-          - not_null
-      - name: total_conversions
-        description: "Total number of conversions for the campaign on the given day."
-        data_tests:
-          - not_null
-      - name: total_conversions_value
-        description: "Total value of conversions for the campaign on the given day."
-        data_tests:
-          - not_null
-  - name: canonical_meta_ads_campaigns
-    description: "Canonical model that combines ad insights with campaign details for Facebook Ads performance reporting."
-    columns:
-      - name: ad_id
-        description: "ID of the ad."
+      - name: order_id
+        description: "The unique identifier for each order."
         tests:
           - not_null
-      - name: ad_name
-        description: "Name of the ad."
+          - unique
+      - name: order_number
+        description: "The Shopify-generated order number."
+      - name: customer_id
+        description: "The unique identifier for each customer."
         tests:
           - not_null
-      - name: ads_insights_campaign_id
-        description: "Campaign ID from the ads insights data."
-        tests:
-          - not_null
-      - name: date_start
-        description: "Start date of the ad campaign."
-        tests:
-          - not_null
-      - name: spend
-        description: "Total spend on the ad."
-        tests:
-          - not_null
-      - name: clicks
-        description: "Total number of clicks on the ad."
-        tests:
-          - not_null
-      - name: impressions
-        description: "Total number of impressions for the ad."
-        tests:
-          - not_null
-      - name: cpc
-        description: "Cost per click for the ad."
-      - name: cpm
-        description: "Cost per thousand impressions for the ad."        
-      - name: ctr
-        description: "Click-through rate for the ad."
+      - name: email
+        description: "The email address of the customer who placed the order."
+      - name: referring_site
+        description: "The site that referred the customer for the current order."
+      - name: landing_site_base_url
+        description: "The base URL of the landing site for the order."
+      - name: billing_first_name
+        description: "The first name of the customer from the billing address."
+      - name: billing_last_name
+        description: "The last name of the customer from the billing address."
+      - name: billing_phone
+        description: "The phone number from the billing address."
+      - name: billing_company
+        description: "The company name from the billing address, if available."
+      - name: billing_address_1
+        description: "The first line of the billing address."
+      - name: billing_address_2
+        description: "The second line of the billing address."
+      - name: billing_address_city
+        description: "The city from the billing address."
+      - name: billing_state
+        description: "The state or province from the billing address."
+      - name: billing_state_code
+        description: "The code for the state or province from the billing address."
+      - name: billing_zip
+        description: "The zip or postal code from the billing address."
+      - name: billing_country
+        description: "The country from the billing address."
+      - name: billing_country_code
+        description: "The code for the country from the billing address."
+      - name: subtotal_price
+        description: "The subtotal price of the order before discounts and taxes."
+      - name: total_line_items_price
+        description: "The total price of all line items in the order."
+      - name: total_price
+        description: "The total price of the order after discounts and taxes."
+      - name: total_discounts
+        description: "The total discounts applied to the order."
+      - name: total_tax
+        description: "The total tax applied to the order."
+      - name: total_refund_amount
+        description: "The total refund amount for the order, if any."
+      - name: source_name
+        description: "The source of the order (e.g., web, POS)."
+      - name: order_tags
+        description: "Tags applied to the order."
+      - name: financial_status
+        description: "The financial status of the order (e.g., paid, pending)."
+      - name: fulfillment_status
+        description: "The fulfillment status of the order (e.g., fulfilled, unfulfilled)."
+      - name: cancel_reason
+        description: "The reason for canceling the order, if applicable."
+      - name: created_at_timestamp
+        description: "The timestamp when the order was created."
+      - name: updated_timestamp
+        description: "The timestamp when the order was last updated."
+      - name: cancelled_timestamp
+        description: "The timestamp when the order was canceled, if applicable."
+      - name: currency
+        description: "The currency in which the order was placed."
+      - name: total_units_sold
+        description: "The total number of units sold in the order."
+      - name: total_shipping_fees
+        description: "The total shipping fees for the order."
+      - name: total_order_cogs
+        description: "The total cost of goods sold for the order."
+      - name: customer_order_seq_number
+        description: "The sequence number of the order for the customer, starting at 1 for the first order."
+      - name: customers_first_order_id
+        description: "The ID of the customer's first order."
+      - name: customers_first_order_date
+        description: "The date of the customer's first order."
+      - name: first_order_marketing_source
+        description: "The marketing source for the customer's first order."
+      - name: first_order_marketing_medium
+        description: "The marketing medium for the customer's first order."
+      - name: days_since_first_order
+        description: "The number of days between the customer's first order and the current order."
+      - name: months_since_first_order_rounded_down
+        description: "The number of months (rounded down) between the customer's first order and the current order."
+      - name: days_since_prev_order
+        description: "The number of days between the current order and the most recent previous order."
+      - name: months_since_prev_order_rounded_down
+        description: "The number of months (rounded down) between the current order and the most recent previous order."

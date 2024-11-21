@@ -6,7 +6,8 @@ models:
       This model generates a sequence of orders per customer and captures details
       of the first order for marketing attribution purposes. It includes customer 
       sequence numbers, marketing sources for the first order, and days/months 
-      between the first order and subsequent orders.
+      between the first order and subsequent orders, as well as details for the 
+      most recent previous order.
     columns:
       - name: order_id
         description: The unique identifier for each order.
@@ -29,14 +30,20 @@ models:
       - name: first_order_date
         description: The date the customer placed their first order.
 
-      - name: customer_order_sequence
+      - name: customer_order_seq_number
         description: The sequence number of the order for the customer, with '1' being the first order.
 
-      - name: days_between_orders
+      - name: days_since_first_order
         description: The number of days between the customer's first order and the current order.
 
-      - name: months_between_orders_rounded_down
+      - name: months_since_first_order_rounded_down
         description: The number of months (rounded down) between the customer's first order and the current order.
+
+      - name: days_since_prev_order
+        description: The number of days between the current order and the most recent previous order.
+
+      - name: months_since_prev_order_rounded_down
+        description: The number of months (rounded down) between the current order and the most recent previous order.
 
       - name: first_order_marketing_source
         description: The marketing source for the customer's first order, determined via UTM parameters or referrer site.
@@ -44,5 +51,5 @@ models:
       - name: first_order_marketing_medium
         description: The marketing medium for the customer's first order, determined via UTM parameters or referrer site.
 
-      - name: current_order_referring_site
+      - name: current_referring_site
         description: The referring site for the current order.

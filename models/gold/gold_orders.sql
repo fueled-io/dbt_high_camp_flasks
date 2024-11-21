@@ -1,12 +1,12 @@
 {{ config(materialized="table") }}
 
-select 
+SELECT 
     created_at_timestamp,
-    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', created_at_timestamp, 'America/Los_Angeles')) as created_at_timestamp_pt,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', created_at_timestamp, 'America/Los_Angeles')) AS created_at_timestamp_pt,
     order_id,
     order_number,
     customer_id,
-    billing_address_city as billing_city,
+    billing_address_city AS billing_city,
     billing_state,
     billing_country,
     subtotal_price,
@@ -25,17 +25,19 @@ select
     fulfillment_status,
     cancel_reason,
     cancelled_timestamp,
-    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', cancelled_timestamp, 'America/Los_Angeles')) as cancelled_timestamp_pt,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', cancelled_timestamp, 'America/Los_Angeles')) AS cancelled_timestamp_pt,
     source_name,
     referring_site,
     landing_site_base_url,
     customers_first_order_id,
     customers_first_order_date,
-    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', customers_first_order_date, 'America/Los_Angeles')) as customers_first_order_date_pt,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', customers_first_order_date, 'America/Los_Angeles')) AS customers_first_order_date_pt,
     first_order_marketing_source,
     first_order_marketing_medium,
-    days_between_customers_first_and_current_order,
-    months_rounded_down_between_customers_first_and_current_order
+    days_since_first_order,
+    months_since_first_order_rounded_down,
+    days_since_prev_order,
+    months_since_prev_order_rounded_down
 
-from {{ ref("canonical_orders") }}
-order by created_at_timestamp desc
+FROM {{ ref("canonical_orders") }}
+ORDER BY created_at_timestamp DESC

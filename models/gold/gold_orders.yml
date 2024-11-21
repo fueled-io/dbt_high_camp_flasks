@@ -103,8 +103,14 @@ models:
       - name: first_order_marketing_medium
         description: "Marketing medium for the customer's first order."
 
-      - name: days_between_customers_first_and_current_order
-        description: "Number of days between the customer's first and current order."
+      - name: days_since_first_order
+        description: "Number of days between the customer's first order and the current order."
 
-      - name: months_rounded_down_between_customers_first_and_current_order
-        description: "Number of months (rounded down) between the customer's first and current order."
+      - name: months_since_first_order_rounded_down
+        description: "Number of months (rounded down) between the customer's first order and the current order."
+
+      - name: days_since_prev_order
+        description: "Number of days between the current order and the customer's most recent previous order."
+
+      - name: months_since_prev_order_rounded_down
+        description: "Number of months (rounded down) between the current order and the customer's most recent previous order."

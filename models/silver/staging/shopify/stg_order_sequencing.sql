@@ -25,11 +25,16 @@ orders_with_seq AS (
         ROW_NUMBER() OVER (
             PARTITION BY customer_id 
             ORDER BY created_at_timestamp
-        ) AS customer_order_seq_number
+        ) AS customer_order_seq_number,
+        -- Get the most recent previous order date for the same customer
+        LAG(created_at_timestamp) OVER (
+            PARTITION BY customer_id
+            ORDER BY created_at_timestamp
+        ) AS prev_order_date
     FROM {{ ref("shopify__orders") }}
 )
 
--- Main select query with sequence numbers and marketing attribution for first order only
+-- Main select query with sequence numbers and marketing attribution
 SELECT
     ow.order_id,
     ow.customer_id,
@@ -42,12 +47,22 @@ SELECT
     ufo.first_order_date,
     DATE_DIFF(
         CAST(ow.order_date AS DATE), CAST(ufo.first_order_date AS DATE), DAY
-    ) AS days_between_orders,
+    ) AS days_since_first_order,
     DATE_DIFF(
         DATE_TRUNC(CAST(ow.order_date AS DATE), MONTH),
         DATE_TRUNC(CAST(ufo.first_order_date AS DATE), MONTH),
         MONTH
-    ) AS months_between_orders_rounded_down,
+    ) AS months_since_first_order_rounded_down,
+
+    -- Calculate days and months since the most recent previous order
+    DATE_DIFF(
+        CAST(ow.order_date AS DATE), CAST(ow.prev_order_date AS DATE), DAY
+    ) AS days_since_prev_order,
+    DATE_DIFF(
+        DATE_TRUNC(CAST(ow.order_date AS DATE), MONTH),
+        DATE_TRUNC(CAST(ow.prev_order_date AS DATE), MONTH),
+        MONTH
+    ) AS months_since_prev_order_rounded_down,
 
     -- Get marketing source and medium for the first order using the macros
     {{ get_marketing_source('ufo.first_referring_site') }} AS first_order_marketing_source,

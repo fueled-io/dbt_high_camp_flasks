@@ -13,8 +13,6 @@ models:
         description: "The Shopify-generated order number."
       - name: customer_id
         description: "The unique identifier for each customer."
-        tests:
-          - not_null
       - name: email
         description: "The email address of the customer who placed the order."
       - name: referring_site

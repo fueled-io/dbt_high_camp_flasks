@@ -70,6 +70,12 @@ models:
       - name: fulfillment_status
         description: "Fulfillment status of the order (e.g., fulfilled, unfulfilled)."
 
+      - name: fulfillment_timestamp
+        description: "timestamp of the most recent fulfillment on the order"
+
+      - name: fulfillment_timestamp_pt
+        description: "timestamp of the most recent fulfillment on the order, converted to Pacific Time."
+
       - name: cancel_reason
         description: "Reason the order was cancelled, if applicable."
 

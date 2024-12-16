@@ -63,6 +63,8 @@ models:
         description: "The financial status of the order (e.g., paid, pending)."
       - name: fulfillment_status
         description: "The fulfillment status of the order (e.g., fulfilled, unfulfilled)."
+      - name: fulfillment_timestamp
+        description: "The timestamp of the most recent fulfillment on the order."
       - name: cancel_reason
         description: "The reason for canceling the order, if applicable."
       - name: created_at_timestamp

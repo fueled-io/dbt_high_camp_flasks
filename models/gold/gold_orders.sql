@@ -23,6 +23,8 @@ SELECT
     customer_order_seq_number,
     financial_status,
     fulfillment_status,
+    fulfillment_timestamp,
+    TIMESTAMP(FORMAT_TIMESTAMP('%F %T', fulfillment_timestamp, 'America/Los_Angeles')) AS fulfillment_timestamp_pt,
     cancel_reason,
     cancelled_timestamp,
     TIMESTAMP(FORMAT_TIMESTAMP('%F %T', cancelled_timestamp, 'America/Los_Angeles')) AS cancelled_timestamp_pt,

@@ -99,3 +99,19 @@ models:
         description: "The number of days between the current order and the most recent previous order."
       - name: months_since_prev_order_rounded_down
         description: "The number of months (rounded down) between the current order and the most recent previous order."
+
+  - name: canonical_refund_transactions
+    description: "A streamlined model consolidating refund transaction data, including timestamps and amounts."
+    columns:
+      - name: order_id
+        description: "The ID of the order associated with the refund."
+        tests:
+          - not_null
+      - name: refund_transaction_timestamp
+        description: "The timestamp of the refund transaction."
+        tests:
+          - not_null
+      - name: refund_transaction_amount
+        description: "The amount of the refund transaction."
+        tests:
+          - not_null

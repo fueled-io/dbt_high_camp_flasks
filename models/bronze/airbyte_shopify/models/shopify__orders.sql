@@ -52,6 +52,6 @@ left join
 left join
     {{ ref('stg_shopify_orders_cogs_tmp') }} as c on o.order_id = c.order_id
 left join
-    {{ ref('stg_shopify_refunds_tmp') }} as r on o.order_id = r.order_id
+    {{ ref('stg_shopify_refund_totals_tmp') }} as r on o.order_id = r.order_id
 left join
     {{ ref('stg_shopify_fulfillments_tmp') }} as f on o.order_id = f.order_id

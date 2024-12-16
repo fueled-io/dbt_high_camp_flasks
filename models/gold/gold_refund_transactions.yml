@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: gold_refund_transactions
+    description: "A gold-tier model consolidating refund transactions with their timestamps in both UTC and Los Angeles Pacific Time."
+    columns:
+      - name: order_id
+        description: "The unique identifier for the order associated with the refund transaction."
+        tests:
+          - not_null
+      - name: refund_transaction_timestamp
+        description: "The original timestamp of the refund transaction in UTC."
+        tests:
+          - not_null
+      - name: refund_transaction_pt
+        description: "The timestamp of the refund transaction converted to Los Angeles Pacific Time."
+        tests:
+          - not_null
+      - name: refund_transaction_amount
+        description: "The monetary value of the refund transaction."
+        tests:
+          - not_null

@@ -12,7 +12,7 @@ models:
         description: "The original timestamp of the refund transaction in UTC."
         tests:
           - not_null
-      - name: refund_transaction_pt
+      - name: refund_transaction_timestamp_pt
         description: "The timestamp of the refund transaction converted to Los Angeles Pacific Time."
         tests:
           - not_null

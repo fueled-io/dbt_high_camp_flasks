@@ -23,6 +23,7 @@ select
     s.total_shipping_fees,  -- Added total_shipping_fee from stg_shopify_orders_tmp.sql
     o.financial_status,
     o.fulfillment_status,
+    f.most_recent_fulfillment_created_at as fulfillment_timestamp, -- Added most recent fulfillment created_at from stg_shopify_fulfillments_tmp.sql
     o.cancel_reason,
     o.tags,
     o.referring_site,
@@ -41,7 +42,7 @@ select
     o.billing_phone as billing_address_phone,
     o.billing_province as billing_address_province,
     o.billing_province_code as billing_address_province_code,
-    o.billing_zip as billing_address_zip
+    o.billing_zip as billing_address_zip,
 from 
     {{ ref('stg_shopify_orders_tmp') }} as o
 left join 
@@ -49,6 +50,8 @@ left join
 left join 
     {{ ref('stg_shopify_orders_shipping_fees_tmp') }} as s on o.order_id = s.order_id
 left join
-    {{ ref('stg_shopify_orders_cogs_tmp')}} as c on o.order_id = c.order_id
+    {{ ref('stg_shopify_orders_cogs_tmp') }} as c on o.order_id = c.order_id
 left join
-    {{ ref('stg_shopify_refunds_tmp')}} as r on o.order_id = r.order_id
+    {{ ref('stg_shopify_refunds_tmp') }} as r on o.order_id = r.order_id
+left join
+    {{ ref('stg_shopify_fulfillments_tmp') }} as f on o.order_id = f.order_id

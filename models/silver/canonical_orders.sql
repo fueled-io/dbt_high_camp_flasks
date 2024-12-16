@@ -31,6 +31,7 @@ SELECT
     so.tags AS order_tags,
     so.financial_status,
     so.fulfillment_status,
+    so.fulfillment_timestamp,
     so.cancel_reason,
     so.created_at_timestamp,
     so.updated_timestamp,
